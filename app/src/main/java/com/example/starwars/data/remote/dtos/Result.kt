@@ -1,0 +1,65 @@
+package com.example.starwars.data.remote.dtos
+
+
+import com.example.starwars.domain.models.ResultModel
+import com.google.gson.annotations.SerializedName
+
+data class Result(
+    @SerializedName("cargo_capacity")
+    val cargoCapacity: String,
+    @SerializedName("consumables")
+    val consumables: String,
+    @SerializedName("cost_in_credits")
+    val costInCredits: String,
+    @SerializedName("created")
+    val created: String,
+    @SerializedName("crew")
+    val crew: String,
+    @SerializedName("edited")
+    val edited: String,
+    @SerializedName("films")
+    val films: List<String>,
+    @SerializedName("hyperdrive_rating")
+    val hyperdriveRating: String,
+    @SerializedName("length")
+    val length: String,
+    @SerializedName("MGLT")
+    val mGLT: String,
+    @SerializedName("manufacturer")
+    val manufacturer: String,
+    @SerializedName("max_atmosphering_speed")
+    val maxAtmospheringSpeed: String,
+    @SerializedName("model")
+    val model: String,
+    @SerializedName("name")
+    val name: String,
+    @SerializedName("passengers")
+    val passengers: String,
+    @SerializedName("pilots")
+    val pilots: List<String>,
+    @SerializedName("starship_class")
+    val starshipClass: String,
+    @SerializedName("url")
+    val url: String
+)
+
+fun Result.toDomain() = ResultModel(
+    cargoCapacity,
+    consumables,
+    costInCredits,
+    created,
+    crew,
+    edited,
+    films,
+    hyperdriveRating,
+    length,
+    mGLT,
+    manufacturer,
+    maxAtmospheringSpeed,
+    model,
+    name,
+    passengers,
+    pilots,
+    starshipClass,
+    url
+)

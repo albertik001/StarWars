@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/starships_fragment">
+
+
+    <fragment
+        android:id="@+id/starships_fragment"
+        android:name="com.example.starwars.presentation.ui.fragments.StarshipsFragment"
+        android:label="fragment_person"
+        tools:layout="@layout/fragment_starships" />
+
+    <fragment
+        android:id="@+id/people_fragment"
+        android:name="com.example.starwars.presentation.ui.fragments.PeopleFragment"
+        android:label="fragment_people"
+        tools:layout="@layout/fragment_people" />
+
+</navigation>
