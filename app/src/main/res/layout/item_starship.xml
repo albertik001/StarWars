@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="8dp"
     android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
     app:cardCornerRadius="12dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -53,7 +54,7 @@
 
         <TextView
             android:id="@+id/starships_model"
-            android:layout_width="200dp"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:ellipsize="end"
@@ -73,13 +74,13 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/starships_price"
-            android:layout_width="90dp"
+            android:layout_width="72dp"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="100000000000000"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/static_price" />
+            app:layout_constraintStart_toEndOf="@id/static_price"
+            tools:text="100000000000000" />
 
         <TextView
             android:id="@+id/static_capacity"
@@ -92,13 +93,13 @@
 
         <TextView
             android:id="@+id/starships_capacity"
-            android:layout_width="68dp"
+            android:layout_width="48dp"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="180000"
             app:layout_constraintStart_toEndOf="@id/static_capacity"
-            app:layout_constraintTop_toTopOf="@id/static_capacity" />
+            app:layout_constraintTop_toTopOf="@id/static_capacity"
+            tools:text="180000" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_vertical_70"
@@ -106,6 +107,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.70" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

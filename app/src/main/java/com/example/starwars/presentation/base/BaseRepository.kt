@@ -48,7 +48,7 @@ abstract class BaseRepository {
                 pageSize = 20,
                 prefetchDistance = 5,
                 enablePlaceholders = true,
-                initialLoadSize = 10,
+                initialLoadSize = 20,
                 maxSize = MAX_SIZE_UNBOUNDED,
                 jumpThreshold = Int.MIN_VALUE
 

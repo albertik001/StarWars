@@ -1,4 +1,4 @@
-package com.example.starwars.presentation.ui.fragments
+package com.example.starwars.presentation.ui.fragments.people
 
 import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding

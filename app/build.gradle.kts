@@ -3,7 +3,7 @@ plugins {
     // Application
     id(libs.plugins.agp.application.get().pluginId)
 
-    // Kotlina
+    // Kotlin
     id("kotlin-android")
 
     // Kapt

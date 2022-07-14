@@ -2,20 +2,33 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph.xml"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/starships_fragment">
 
 
     <fragment
         android:id="@+id/starships_fragment"
-        android:name="com.example.starwars.presentation.ui.fragments.StarshipsFragment"
+        android:name="com.example.starwars.presentation.ui.fragments.starships.StarshipsFragment"
         android:label="fragment_person"
-        tools:layout="@layout/fragment_starships" />
+        tools:layout="@layout/fragment_starships">
+        <action
+            android:id="@+id/action_starships_fragment_to_starshipsDetailFragment"
+            app:destination="@id/starshipFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/people_fragment"
-        android:name="com.example.starwars.presentation.ui.fragments.PeopleFragment"
+        android:name="com.example.starwars.presentation.ui.fragments.people.PeopleFragment"
         android:label="fragment_people"
         tools:layout="@layout/fragment_people" />
+    <fragment
+        android:id="@+id/starshipFragment"
+        android:name="com.example.starwars.presentation.ui.fragments.starships.detail.StarshipFragment"
+        android:label="fragment_starships_detail"
+        tools:layout="@layout/fragment_starship">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

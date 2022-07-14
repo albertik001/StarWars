@@ -6,5 +6,5 @@ import javax.inject.Inject
 class FetchPagedStarshipsUseCase @Inject constructor(
     private val starshipsRepository: StarshipsRepository
 ) {
-    operator fun invoke() = starshipsRepository.fetchPagedStarships()
+    suspend operator fun invoke() = starshipsRepository.fetchPagedStarships()
 }

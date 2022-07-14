@@ -8,7 +8,7 @@ import com.example.starwars.databinding.ItemStarshipBinding
 import com.example.starwars.presentation.base.BaseDiffUtil
 import com.example.starwars.presentation.models.ResultUI
 
-class StarshipsAdapter :
+class StarshipsAdapter(private val onItemClick: ((id: Int) -> Unit)? = null) :
     PagingDataAdapter<ResultUI, StarshipsAdapter.StarshipsViewHolder>(BaseDiffUtil()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StarshipsViewHolder {
@@ -32,6 +32,10 @@ class StarshipsAdapter :
             binding.starshipsModel.text = resultUI.model
             binding.starshipsCapacity.text = resultUI.cargoCapacity
             binding.starshipsPrice.text = resultUI.costInCredits
+
+            itemView.setOnClickListener {
+                onItemClick?.invoke(resultUI.url.filter(Char::isDigit).toInt())
+            }
         }
     }
 }
